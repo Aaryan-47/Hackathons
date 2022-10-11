@@ -6,7 +6,7 @@ import {db} from '../firebase-config';
 import Navbar from '../Components/Navbar'
 import '../styles/SingleChallenge.css';
 
-function SingleChallenge()
+function SingleChallenge()  
 {
   const loc=useLocation().pathname;
   const id=loc.slice(1);
