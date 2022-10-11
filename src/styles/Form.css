@@ -1,0 +1,221 @@
+.HeadingBox
+{
+position: absolute;
+width: 1371px;
+height: 207px;
+top: 64px;
+right: 5px;
+background: #e7e9f4;
+border-right: solid black;
+border-left:solid black;
+border-width: 100px;
+}
+
+.Heading{
+position: absolute;
+width: 506px;
+height: 29px;
+left: 417px;
+top: 41px;
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 64px;
+line-height: 29px;
+color: #000000;
+
+}
+.Form
+{
+    position:relative;
+    top:200px;
+    width:1371px;
+    margin-top:30px;
+    background: #e7e9f4;
+    height:1200px;
+    right:15px;
+    border-right: 100px solid black;
+    border-left:50px solid black;
+}
+
+.formheading1
+{
+position: absolute;
+width: 363px;
+height: 21px;
+left: 50px;
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 33px;
+line-height: 19px;
+color: #333333;
+}
+
+input[type=text]
+{
+position: relative;
+width: 791px;
+height: 35px;
+left: 50px;
+top: 33px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #444444;
+}
+
+.formheading2
+{
+position: relative;
+width: 363px;
+height: 21px;
+left: 50px;
+top: 67px;
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 33px;
+line-height: 19px;
+color: #333333;
+}
+
+.start_date
+{
+    box-sizing: border-box;
+    position: absolute;
+    width: 791px;
+    height: 39px;
+    left: 50px;
+    top: 147px;
+    border: 1px solid #B7B7B7;
+    border-radius: 5px;
+}
+
+.formheading3
+{
+position: relative;
+width: 363px;
+height: 10px;
+left: 50px;
+top: 157px;
+
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 33px;
+line-height: 19px;
+color: #333333;
+}
+
+.end_date
+{
+box-sizing: border-box;
+position: absolute;
+width: 791px;
+height: 39px;
+left: 49px;
+top: 257px;
+border: 1px solid #B7B7B7;
+border-radius: 5px;
+}
+
+.formheading4
+{
+    position: relative;
+width: 363px;
+height: 10px;
+left: 50px;
+top: 257px;
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 33px;
+line-height: 19px;
+color: #333333;
+}
+
+.description
+{
+box-sizing: border-box;
+position: absolute;
+width: 1017px;
+height: 252px;
+left: 49px;
+top: 377px;
+border: 1px solid #B7B7B7;
+border-radius: 5px;
+}
+
+.formheading5
+{
+position: relative;
+width: 363px;
+height: 21px;
+left: 49px;
+top: 588px;
+font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+font-size: 33px;
+line-height: 19px;
+color: #333333;
+}
+
+.menu
+{
+box-sizing: border-box;
+position: relative;
+width: 436px;
+height: 39px;
+left: 49px;
+top: 616px;
+border: 1px solid #B7B7B7;
+border-radius: 5px;
+}
+
+.upload
+{
+box-sizing: border-box;
+position: relative;
+width: 297px;
+height: 218px;
+top: 679px;
+right:390px;
+background: #F8F9FD;
+border: 1px solid #F8F9FD;
+border-radius: 10px;
+
+}
+
+input[type=file]
+{
+    font-family: 'Edu TAS Beginner', cursive;
+font-weight: 700;
+}
+
+
+
+.button
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 18px;
+    gap: 10px;
+    position: absolute;
+    width: 214px;
+    height: 46px;
+    font-family: 'Edu TAS Beginner', cursive;
+  font-weight:1000;
+  height:50px;
+    left: 49px;
+    font-size:23px;
+    top: 1073px;
+    background: #44924C;
+    border-radius: 10px;
+}
+
+.button:hover
+{
+    background-color: aqua;
+    transform: scale(1.2);
+
+}
