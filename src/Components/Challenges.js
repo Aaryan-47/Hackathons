@@ -54,9 +54,9 @@ function Challenges()
         }
 
         const getByName=async ()=>{
-            const q= query(HackRef, where("Name","==",`${nameQuery}`));
+            const q= query(HackRef, where("Name","==",`${menuVal}`));
             const querySnapshot= await getDocs(q);
-            console.log(q);
+            console.log(menuVal);
             sethacks(querySnapshot.docs.map((doc)=>({...doc.data(),id:doc.id})));
         }
 
@@ -70,11 +70,12 @@ function Challenges()
         const getByOld = async ()=>{
             const q= query(HackRef, orderBy("End","desc"));
             const querySnapshot= await getDocs(q);
-            console.log(q);
+            console.log(menuVal);
             sethacks(querySnapshot.docs.map((doc)=>({...doc.data(),id:doc.id})));
         }
         if(nameQuery!=="AA")
         {
+            console.log("AAA");
             getByName();
         }
         else{
@@ -105,6 +106,10 @@ function Challenges()
         {
           getByOld();
         }
+        else if(check===8)
+        {
+            getByName();
+        }
     }
     },[check,level])
      console.log(menuVal);
@@ -114,30 +119,30 @@ function Challenges()
         {
             setcheck(1);
         }
-        if(menuVal==="New")
+        else if(menuVal==="New")
         {
             setcheck(6);
         }
-        if(menuVal==="Old")
+        else if(menuVal==="Old")
         {
             setcheck(7);
         }
-       if(menuVal==="easy")
+       else if(menuVal==="easy")
        {
           setlevel("easy");
           setcheck(2);
        }
-        if(menuVal==="medium")
+        else if(menuVal==="medium")
        {
         setlevel("medium")
         setcheck(2)
        }
-       if(menuVal==="hard")
+       else if(menuVal==="hard")
        {
         setlevel("hard");
         setcheck(2);
        }
-       if(menuVal==="upcoming")
+       else if(menuVal==="upcoming")
        {
         setcheck(3);
        }
@@ -149,6 +154,10 @@ function Challenges()
        {
         setcheck(5);
        }
+       else
+       {
+        setcheck(8);
+       }
      }
    return (
     <>
@@ -156,14 +165,17 @@ function Challenges()
         Explore Challenges
     </div>
     <div className="search">
-     <input className="searchbox"type="text" placeholder="Search Here" onChange={(e)=>setnameQuery(e.target.value)}/>
+     <input className="searchbox"type="text" placeholder="Search Here" onChange={(e)=>setmenuVal(e.target.value)}/>
      <select value={menuVal} onChange={(e)=>setmenuVal(e.target.value)} className="custom-select">
         <option value="All">All</option>
+        <option className="sort">Sorting</option>
         <option value="New">Newest First</option>
         <option value="Old">Oldest First</option>
+        <option className="difficulty">Difficulty</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
+        <option className="status">Status</option>
         <option value="upcoming">Upcoming</option>
         <option value="past">Past</option>
         <option value="active">Active</option>

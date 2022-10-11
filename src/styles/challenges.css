@@ -68,14 +68,16 @@ border-radius: 12px;
 .custom-select
 {
     box-sizing: border-box;
-    width: 110px;
+    width: 135px;
     height: 42px;
     position :relative;
+    text-align:center;
     left:100px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 12px;
     top:30px;
+    font-size:18px;;
 }
 
 .select-items
@@ -109,6 +111,30 @@ border-radius: 12px;
 {
     background-color: aqua;
     transform: scale(1.2);
+}
+
+.sort
+{
+    font-family: 'Edu TAS Beginner', cursive;
+  font-weight:1000;
+    font-size: 25px;
+    background-color: #44924C;
+}
+
+.difficulty
+{
+    font-family: 'Edu TAS Beginner', cursive;
+  font-weight:1000;
+    font-size: 25px;
+    background-color: #ca0707;
+}
+
+.status
+{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-weight:1000;
+      font-size: 25px;
+      background-color: #0710b8; 
 }
 
 

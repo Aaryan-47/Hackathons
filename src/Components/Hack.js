@@ -17,6 +17,7 @@ function Hack({detail})
     <>
     <div className="post">
         <img className="postImg" src={detail.Image} alt=""/>
+        <br></br>
         <div className="postDate">
           {diff>0 && diff1<0 ?<div className="Active">Active</div>:diff<0?<div className="Upcoming">Upcoming</div>:<div className="Past">Past</div>}
         </div>
