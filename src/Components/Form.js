@@ -25,7 +25,6 @@ const hackathonRef= collection(db,"hackathons")
 const[file,setfile]= useState(null);
 
 
-
  const createHackathon=async ()=>{
    
    try{
@@ -39,6 +38,7 @@ const[file,setfile]= useState(null);
          getDownloadURL(imageRef).then((url)=>{
             setlink(url);
             console.log(url);
+            addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:link,Level:level})
             })
             .catch((err)=>{
              console.log(err);
@@ -47,8 +47,8 @@ const[file,setfile]= useState(null);
 
       }
       console.log(link);
-   await addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:link,Level:level})
-   await updateDoc(hackathonRef,{Image:link})
+  
+   //await updateDoc(hackathonRef,{Image:link})
     
    }
    catch(err)
