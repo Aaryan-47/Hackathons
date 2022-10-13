@@ -17,7 +17,7 @@ function Challenges()
     const [check,setcheck]=useState(1)
     const[hacks,sethacks]=useState([]);
     const [level,setlevel]=useState("easy")
-    const [menuVal,setmenuVal]=useState("all");
+    const [menuVal,setmenuVal]=useState("All");
     const [nameQuery,setnameQuery]=useState("AA");
     const [date,setdate]=useState(new Date().toISOString().split('T')[0])
     const HackRef=collection(db,"hackathons")
@@ -73,115 +73,86 @@ function Challenges()
             console.log(menuVal);
             sethacks(querySnapshot.docs.map((doc)=>({...doc.data(),id:doc.id})));
         }
-        if(nameQuery!=="AA")
-        {
-            console.log("AAA");
-            getByName();
-        }
-        else{
-        if(check===1){
+        if(menuVal==="All"||menuVal===""){
         gethacks();
         }
-        else if(check===2)
+        else if(menuVal==="easy"||menuVal==="medium"||menuVal==="hard")
         {
+            if(menuVal==="easy")
+            setlevel("easy")
+            else if(menuVal==="hard")
+            setlevel("hard")
+            else
+            setlevel("medium")
             getlevels()
         }
-        else if(check===3)
+        else if(menuVal==="upcoming")
         {
             getUpcoming();
         }
-        else if(check===4)
+        else if(menuVal==="past")
         {
             getPast();
         }
-        else if(check===5)
+        else if(menuVal==="active")
         {
             getActive();
         }
-        else if(check==6)
+        else if(menuVal==="new")
         {
           getByNew();
         }
-        else if(check===7)
+        else if(menuVal==="old")
         {
           getByOld();
         }
-        else if(check===8)
-        {
-            getByName();
-        }
-    }
-    },[check,level])
-     console.log(menuVal);
-
-     const handle=()=>{
-        if(menuVal==="All")
-        {
-            setcheck(1);
-        }
         else if(menuVal==="New")
         {
-            setcheck(6);
+            getByNew();
         }
         else if(menuVal==="Old")
         {
-            setcheck(7);
+            getByOld();
         }
-       else if(menuVal==="easy")
-       {
-          setlevel("easy");
-          setcheck(2);
-       }
-        else if(menuVal==="medium")
-       {
-        setlevel("medium")
-        setcheck(2)
-       }
-       else if(menuVal==="hard")
-       {
-        setlevel("hard");
-        setcheck(2);
-       }
-       else if(menuVal==="upcoming")
-       {
-        setcheck(3);
-       }
-       else if(menuVal==="past")
-       {
-        setcheck(4);
-       }
-       else if(menuVal==="active")
-       {
-        setcheck(5);
-       }
-       else
-       {
-        setcheck(8);
-       }
-     }
+        else 
+        {
+            getByName();
+        }
+    },[menuVal,level])
+     console.log(menuVal);
+
    return (
     <>
     <div className="Title">
+        <div className="titleBox">
         Explore Challenges
-    </div>
-    <div className="search">
+        </div>
+        <div className="search">
+            <div className="search-container">
      <input className="searchbox"type="text" placeholder="Search Here" onChange={(e)=>setmenuVal(e.target.value)}/>
+     </div>
      <select value={menuVal} onChange={(e)=>setmenuVal(e.target.value)} className="custom-select">
+        <option selected value="">Filter</option>
         <option value="All">All</option>
-        <option className="sort">Sorting</option>
+        <optgroup label="Sort By">
         <option value="New">Newest First</option>
         <option value="Old">Oldest First</option>
-        <option className="difficulty">Difficulty</option>
+        </optgroup>
+        <optgroup label="Difficulty">
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
-        <option className="status">Status</option>
+        </optgroup>
+
+        <optgroup label="Status">
         <option value="upcoming">Upcoming</option>
         <option value="past">Past</option>
         <option value="active">Active</option>
+        </optgroup>
      </select>
-     <button className="button4" onClick={handle}>GO</button>
     </div>
+    </div>
+    
   
     <div className="hacks">
         {hacks.map((b)=>(

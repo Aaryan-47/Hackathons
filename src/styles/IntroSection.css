@@ -2,13 +2,15 @@
 {
 border-left:solid #FFCE5C;
 border-width: 10px;;
+padding-left:40px;
 position: absolute;
 width: 643px;
 height: 112px;
 left: 205px;
 top: 190px;
 background-color: #003145;
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Poppins';
+font-style: normal;
 font-weight: 600;
 font-size: 48px;
 line-height: 56px;
@@ -41,9 +43,11 @@ width: 531px;
 height: 112px;
 left: 205px;
 top: 340px;
-font-family: 'Edu TAS Beginner', cursive;
-font-weight: 1000;
-font-size: 25px;
+font-family: 'Poppins';
+font-style: normal;
+padding-left:50px;
+font-weight: 500;
+font-size: 18px;
 line-height: 28px;
 color: #ECECEC;
 background-color: #003145;
@@ -71,16 +75,18 @@ background: #003145;
 
 .button1
 {
-  position:absolute;
-  left:200px;
-  width:200px;
-  font-family: 'Edu TAS Beginner', cursive;
+  position:relative;
+  left:140px;
+  top:-40px;
+  width:198px;
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight:1000;
-  height:50px;
+  height:47px;
   background-color: rgb(249, 249, 248);
   color:black;
-  font-size:23px;
-  border-radius:20%;
+  font-size:18px;
+  border-radius:10px;
 }
 
 .button1:hover
@@ -93,19 +99,22 @@ background: #003145;
 .container3
 {
     width:1442px;
-    height:150px;
-    
+    height:200px;
+    display:flex;
     border-left: solid black;
     border-right:solid black;
     border-width: 100px;
+    
     background: #002A3B;
 }
 
 .submissions
 {
     background: #002A3B;
+    border-top:1px solid white;
     border-right:2px solid white;
-    
+    font-family: 'Inter';
+font-style: normal;
 }
 
 .textI
@@ -114,7 +123,7 @@ position: absolute;
 width: 157px;
 height: 17px;
 left: 260px;
-top: 609px;
+top: 629px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -129,7 +138,7 @@ position: absolute;
 width: 190px;
 height: 17px;
 left: 260px;
-top: 640px;
+top: 660px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -144,7 +153,7 @@ color: #FFFFFF;
     width: 190px;
     height: 17px;
     left: 188px;
-    top: 599px;
+    top: 626px;
 }
 
 .iconImg1
@@ -152,8 +161,8 @@ color: #FFFFFF;
     position: absolute;
     width: 190px;
     height: 17px;
-    left: 588px;
-    top: 599px;
+    left: 628px;
+    top: 626px;
 }
 
 .textI1
@@ -161,8 +170,8 @@ color: #FFFFFF;
 position: absolute;
 width: 157px;
 height: 17px;
-left: 660px;
-top: 609px;
+left: 710px;
+top: 629px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -176,8 +185,8 @@ color: #FFFFFF;
 position: absolute;
 width: 190px;
 height: 17px;
-left: 660px;
-top: 640px;
+left: 710px;
+top: 660px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -191,8 +200,8 @@ color: #FFFFFF;
     position: absolute;
     width: 190px;
     height: 17px;
-    left: 988px;
-    top: 599px;
+    left: 1088px;
+    top: 626px;
 }
 
 .textI2
@@ -200,8 +209,8 @@ color: #FFFFFF;
 position: absolute;
 width: 157px;
 height: 17px;
-left: 1060px;
-top: 609px;
+left: 1160px;
+top: 629px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -215,8 +224,8 @@ color: #FFFFFF;
 position: absolute;
 width: 190px;
 height: 17px;
-left: 1060px;
-top: 640px;
+left: 1160px;
+top: 660px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;

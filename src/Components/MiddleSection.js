@@ -15,7 +15,7 @@ function MiddleSection()
      <Grid container spacing={2}>
         <Grid item xs={12} className="heading">
          <div className="title">
-            Why Participate in AI Challenges ?
+            Why Participate in</div><div className="title1"> AI Challenges ?
          </div>
         </Grid>
         <Grid item xs={12} className="contents">

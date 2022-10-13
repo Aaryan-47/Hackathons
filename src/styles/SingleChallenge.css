@@ -12,11 +12,12 @@ background: #003145;
 .PostTitle
 {
     position: absolute;
-width: 818px;
+width: 1818px;
 height: 48px;
 left: 126px;
 top: 218px;
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Poppins';
+font-style: normal;
 font-weight: 600;
 font-size: 40px;
 line-height: 48px;
@@ -26,8 +27,8 @@ color: #FFFFFF;
 .PostDate
 {
     position: absolute;
-width: 504px;
-height: 54px;
+width: 304px;
+height: 94px;
 left: 126px;
 top: 100px;
 
@@ -40,9 +41,8 @@ border-radius: 5px;
 width: 567px;
 height: 12px;
 left: 30px;
-
 font-family: 'Edu TAS Beginner', cursive;
-font-weight: 600;
+font-weight: 300;
 font-size: 16px;
 line-height: 12px;
 /* identical to box height, or 86% */
@@ -76,11 +76,14 @@ height: 29px;
 left: 146px;
 top: 12px;
 
-font-family: 'Edu TAS Beginner', cursive;
-font-weight: 700;
-font-size: 28px;
-line-height: 161.8%;
-/* or 29px */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+
 
 display: flex;
 align-items: center;
@@ -108,9 +111,10 @@ height: 322px;
 left: 126px;
 top: 595px;
 
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Poppins';
+font-style: normal;
 font-weight: 500;
-font-size: 21px;
+font-size: 18px;
 line-height: 28px;
 /* or 156% */
 
@@ -132,13 +136,17 @@ flex-direction: row;
     align-items: center;
     padding: 6px 18px;
     gap: 10px;
-    font-family: 'Edu TAS Beginner', cursive;
-  font-weight:1000;
-  font-weight:1000;
-    font-size:23px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+letter-spacing: -0.02em;
    
     border-radius: 10px;  
-background: #0ae97e;
+background: #F8F9FD;;
 border-radius: 5px;
 }
 
@@ -154,13 +162,16 @@ flex-direction: row;
     align-items: center;
     padding: 6px 18px;
     gap: 10px;
-    font-family: 'Edu TAS Beginner', cursive;
-  font-weight:1000;
-  font-weight:1000;
- 
-    font-size:23px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+letter-spacing: -0.02em;
     border-radius: 10px;  
-background: #c4b402;
+background: #F8F9FD;;
 border-radius: 5px;
 }
 
@@ -178,13 +189,13 @@ flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 18px;
-    gap: 10px;
-    font-family: 'Edu TAS Beginner', cursive;
-  font-weight:1000;
-  font-weight:1000;
-  
-    font-size:23px;
-    background: #f50e0e;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+   
+    background: #F8F9FD;;
     border-radius: 10px;  
 }
 
@@ -196,20 +207,25 @@ flex-direction: row;
     width: 91px;
     height: 37px;
     left: 1120px;
-    
+    top:20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 18px;
     gap: 10px;
-    font-family: 'Edu TAS Beginner', cursive;
-  font-weight:1000;
-  font-weight:1000;
-  height:50px;
-    font-size:23px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+color:white;
+/* or 156% */
+
+letter-spacing: -0.02em;
     background: #44924C;
     border-radius: 10px;
+    border:none;
 }
 
 .buttonEdit:hover{
@@ -220,6 +236,7 @@ flex-direction: row;
 .buttondel
 {
     position: absolute;
+    top:20px;
     width: 91px;
     height: 37px;
     left: 1290px;
@@ -229,13 +246,17 @@ flex-direction: row;
     align-items: center;
     padding: 6px 18px;
     gap: 10px;
-    font-family: 'Edu TAS Beginner', cursive;
-  font-weight:1000;
-  font-weight:1000;
-  height:50px;
-    font-size:23px;
-    background: #f50e0e;
-    border-radius: 10px;   
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+color:red;
+/* or 156% */
+
+letter-spacing: -0.02em;
+    border-radius: 10px; 
+    border:1px solid red;
 }
 
 .buttondel:hover

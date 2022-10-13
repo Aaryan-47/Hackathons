@@ -5,7 +5,8 @@ import {useState} from 'react';
 import {db} from '../firebase-config';
 import{
    collection,
-   addDoc
+   addDoc,
+   updateDoc
 } from 'firebase/firestore';
 
 import{ref, uploadBytes, getDownloadURL} from 'firebase/storage';
@@ -45,14 +46,16 @@ const[file,setfile]= useState(null);
         })
 
       }
+      console.log(link);
    await addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:link,Level:level})
-   console.log(link);
-    window.alert("Succesfully created Hackathon");
+   await updateDoc(hackathonRef,{Image:link})
+    
    }
    catch(err)
    {
       console.log(err);
    }
+   window.alert("Succesfully created Hackathon");
  }
  //createHackathon();
    return(
@@ -60,7 +63,7 @@ const[file,setfile]= useState(null);
       <Navbar/>
       <div className="HeadingBox">
          <div className="Heading">
-            Create a challenge
+            Challenge Details
          </div>
       </div>
       <div className="Form">
@@ -69,7 +72,7 @@ const[file,setfile]= useState(null);
             </div>
       <input type="text" onChange={(e)=>setname(e.target.value)}/>
      
-       <div className="formheading2"> Start Date</div>
+       <div className="formheading2" > Start Date</div>
       
       <input type="date"  className="start_date"onChange={(e)=>setstart(e.target.value)}/>
       <div className="formheading3">End Date</div>

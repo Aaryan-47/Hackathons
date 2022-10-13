@@ -1,25 +1,29 @@
 .post {
-    width: 340px;
-    margin: 0px 65px 50px 25px;
+    width: 354px;
+    height:473px;
+    margin: 0px 35px 50px 25px;
     display: flex;
-    justify-content: center;
+    justify-content: top;
     flex-direction: column;
     background:white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.08);
   }
    
 
 
 .postImg {
-width: 340px;
-height: 280px;
-object-fit: cover;
+width: 354px;
+height: 174px;
+
 
 }
 
 .postTitle {
-  font-family: 'Edu TAS Beginner', cursive;
+  font-family: 'Poppins';
+  font-style: normal;
   
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
     margin-top: 15px;
     margin-left:30px;
@@ -27,16 +31,24 @@ object-fit: cover;
     cursor: pointer;
   }
 
+  .postDate
+  {
+    display:flex;
+    justify-content:center;
+  }
+
   .Active
   {
     background: rgba(68, 146, 76, 0.24);
 border-radius: 5px;
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Inter';
+font-style: normal;
 font-weight:600;
-font-size: 17px;
+font-size: 12px;
 line-height: 16px;
 /* or 133% */
 height:20px;
+width:61px;
 text-align: center;
 
 color: #44924C;
@@ -46,14 +58,15 @@ color: #44924C;
   {
     background: rgba(255, 60, 0, 0.170148);
 border-radius: 5px;
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Inter';
+font-style: normal;
 font-weight: 600;
-font-size: 17px;
+font-size: 12px;
 line-height: 16px;
 /* or 133% */
 height:20px;
 text-align: center;
-
+width:61px;
 color: #666666;
   }
 
@@ -61,9 +74,10 @@ color: #666666;
 {
   background: rgba(242, 201, 76, 0.25);
 border-radius: 5px;
-font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Inter';
+font-style: normal;
 font-weight: 600;
-font-size: 17px;
+font-size: 12px;
 line-height: 16px;
 /* or 133% */
 height:20px;
@@ -86,21 +100,70 @@ font-size: 17px;
 line-height: 28px;
 /* or 156% */
 }
+
+.TimeHeading
+{
+  position:relative;
+  left:100px;
+  width: 142px;
+  height: 13px;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 14px;
+/* or 100% */
+
+text-align: center;
+
+color: #444444;
+}
+
+.remaining
+{
+  position:relative;
+  left:20px;
+  font-size:18px;
+  font-weight:800;
+  top:10px;
+}
+
+.endDate
+{
+  position:relative;
+  left:20px;
+  font-size:18px;
+  font-weight:800;
+  top:10px;
+}
+
+.Datremaining
+{
+  position:relative;
+  top:6px;
+  left:18px;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 200;
+font-size: 10px;
+line-height: 28px;
+word-spacing:13px;
+}
 .QQQ
 {
   font-family: 'Edu TAS Beginner', cursive;
-  color:rgb(241, 46, 46)
+  color:#454545;
 }
 
 .QQ{
   font-family: 'Edu TAS Beginner', cursive;
-  color: rgb(8, 160, 8)
+  color: #454545;
 }
 
 .Q
 {
   font-family: 'Edu TAS Beginner', cursive;
-  color: rgb(91, 91, 4)
+  color:#454545;
 }
 
 .button5
@@ -111,16 +174,20 @@ line-height: 28px;
     align-items: center;
     padding: 6px 18px;
     gap: 10px;
-    width: 214px;
-    height: 46px;
-    font-family: 'Edu TAS Beginner', cursive;
+    width: 182.55px;
+    height: 42px;
+    top:40px;
+    font-family: 'Poppins';
+font-style: normal;
   font-weight:1000;
   height:50px;
-    font-size:23px;
+    font-size:14px;
     background: #44924C;
     border-radius: 10px;
     position:relative;
-    left:50px;
+    left:80px;
+    color:#FFFFFF;
+    border:none;
 }
 
 .button5:hover

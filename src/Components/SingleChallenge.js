@@ -5,6 +5,10 @@ import {useState,useEffect} from 'react';
 import {db} from '../firebase-config';
 import Navbar from '../Components/Navbar'
 import '../styles/SingleChallenge.css';
+import {Link} from 'react-router-dom';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import HourglassTopIcon from '@mui/icons-material/HourglassTop';
+import SignalCellular3BarIcon from '@mui/icons-material/SignalCellular3Bar';
 
 function SingleChallenge()  
 {
@@ -22,17 +26,9 @@ function SingleChallenge()
   },[])
 
   const [update,setupdate]=useState(true);
-  const [names,setnames]=useState("");
-const[descs,setdescs]=useState("");
-const[levels,setlevels]=useState("easy");
-const[starts,setstarts]=useState(Date.now());   
-const[ends,setends]=useState(Date.now());   
+    
 
-  const Update=async ()=>{
-   const userDoc= doc(db,"hackathons",`${id}`);
-   const newFields= {Description: descs,Name:names,Start:starts,End:ends,Level:levels};
-   await updateDoc(userDoc,newFields);
-  }
+  
 
   const deleteUser = async () => {
     const userDoc = doc(db, "hackathons", `${id}`);
@@ -44,13 +40,13 @@ const[ends,setends]=useState(Date.now());
   console.log(HackInfo)
   return(
     <>
-    {update ? (<>  <Navbar/>
+    <>  <Navbar/>
     <div className="PostHeading">
       <div className="PostDate">
         <div className="Date">
           <br></br>
-          Start-Date:{new Date(HackInfo.Start.stringValue).toString()}<br></br><br></br>
-          End-Date: {new Date(HackInfo.End.stringValue).toString()}
+          {<AccessTimeIcon/>}Start-Date:{new Date(HackInfo.Start.stringValue).toDateString()}<br></br><br></br>
+          {<HourglassTopIcon/>}End-Date: {new Date(HackInfo.End.stringValue).toDateString()}
         </div>
       </div>
       
@@ -59,7 +55,7 @@ const[ends,setends]=useState(Date.now());
       </div>
       <div className={HackInfo.Level.stringValue}>
        <div className="level">
-        {HackInfo.Level.stringValue}
+       {HackInfo.Level.stringValue}
        </div>
         </div>
     </div>
@@ -68,43 +64,14 @@ const[ends,setends]=useState(Date.now());
         Overview
       </div>
       <div className="underline"></div>
-      <button className="buttonEdit" onClick={()=>setupdate(false)}>Edit</button>
+      <Link to={`/update/${id}`} >
+      <button className="buttonEdit" onClick={()=>setupdate(false)}>Edit</button></Link>
       <button className="buttondel" onClick={deleteUser}>Delete</button>
     </div>
     <div className="descriptionBox">
       {HackInfo.Description.stringValue}
-    </div></>):(<><Navbar/>
-      <div className="HeadingBox">
-         <div className="Heading">
-            Update a challenge
-         </div>
-      </div>
-      <div className="Form">
-         <div className="formheading1">
-            Challenge Name
-            </div>
-      <input type="text" onChange={(e)=>setnames(e.target.value)}/>
-     
-       <div className="formheading2"> Start Date</div>
-      
-      <input type="date"  className="start_date"onChange={(e)=>setstarts(e.target.value)}/>
-      <div className="formheading3">End Date</div>
-      
-      <input className="end_date"type="date" onChange={(e)=>setends(e.target.value)}/>
-      <div className="formheading4">Description</div>
-
-      <textarea className="description"
-        type="text"  onChange={(e)=>setdescs(e.target.value)}/>
-      <div className="formheading5"> Choose Difficulty</div>
-     
-      <select value="easy" onChange={(e)=>setlevels(e.target.value)} className="menu">
-         <option value="easy">Easy</option>
-         <option value="medium">Medium</option>
-         <option value="hard">Hard</option>
-      </select>
-
-      <button className="button" onClick={Update}>Update Changes</button>
-    </div></>)}
+    </div>
+    </>
     
     </>
   )
