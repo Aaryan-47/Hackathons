@@ -36,18 +36,22 @@ const[file,setfile]= useState(null);
         
         uploadBytes(imageRef, file).then(()=>{
          getDownloadURL(imageRef).then((url)=>{
-            setlink(url);
-            console.log(url);
-            addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:link,Level:level})
+            addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:url,Level:level})
+            window.alert("Succesfully create Hackathon");
             })
             .catch((err)=>{
              console.log(err);
             })
         })
-
+        console.log(link);
+      
       }
-      console.log(link);
-  
+      else
+      {
+         await addDoc(hackathonRef,{Name:name,Description:desc,Start:start,End:end,Image:link,Level:level})
+         window.alert("Succesfully created Hackathon");
+      }
+    
    //await updateDoc(hackathonRef,{Image:link})
     
    }
@@ -55,7 +59,7 @@ const[file,setfile]= useState(null);
    {
       console.log(err);
    }
-   window.alert("Succesfully created Hackathon");
+   
  }
  //createHackathon();
    return(
